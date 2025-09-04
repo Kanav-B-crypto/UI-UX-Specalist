@@ -1,0 +1,129 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f7f7fa;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* ---------- HEADER ---------- */
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #343a40;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+header h1 {
+  font-size: 50px;
+  margin-bottom: 12px;
+}
+header h3 {
+  margin-bottom: 20px;
+  font-weight: normal;
+  color: #cfcfcf;
+}
+.n1 a {
+  color: #91e1c5;
+  text-decoration: none;
+  margin: 0 18px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.n1 a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* ---------- IMAGE ---------- */
+img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #91e1c5;
+  margin-right: 25px;
+}
+
+/* ---------- SECTIONS ---------- */
+.s {
+  max-width: 850px;
+  margin: 40px auto;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+  padding: 40px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.6s ease;
+}
+.s.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.s h2 {
+  border-bottom: 2px solid #e5e7eb;
+  margin-bottom: 20px;
+  padding-bottom: 6px;
+  color: #333;
+}
+.s1 .content {
+  display: flex;
+  align-items: center;
+}
+
+/* ---------- TABLE ---------- */
+.s2 table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 15px;
+  background: #fafcff;
+}
+.s2 th, .s2 td {
+  border: 1px solid #a5a7bb;
+  padding: 12px;
+  text-align: center;
+}
+
+/* ---------- SKILLS ---------- */
+.s3 ul {
+  list-style: none;
+}
+.s3 ul li {
+  background: #e0f2fe;
+  color: #074055;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-weight: bold;
+  box-shadow: 0 1px 5px #bbe2fe7e;
+  margin: 6px;
+  display: inline-block;
+  transition: 0.3s;
+}
+.s3 ul li:hover {
+  background: #91e1c5;
+  color: #fff;
+}
+
+/* ---------- PROJECTS ---------- */
+.s4 ol li {
+  font-weight: bold;
+  padding: 6px;
+  margin: 6px 0;
+  font-size: 18px;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  text-align: center;
+  margin: 40px 0 20px 0;
+  color: #666;
+  font-size: 14px;
+}
