@@ -1,98 +1,163 @@
-body {
-    font-family: Arial, sans-serif;
+/* Universal Reset */
+* {
     margin: 0;
-    background: #f4f4f9;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+/* Element Selector */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ID Selector */
+#main-title {
+    font-size: 2.2rem;
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+/* Header with Flexbox */
 header {
-    background: #4b0082;
+    background: linear-gradient(90deg, #4b0082, #6a0dad);
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+/* Navigation with Flexbox */
 nav {
-    background: #333;
-    text-align: center;
-    padding: 10px;
+    background: #222;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 nav a {
     color: white;
-    margin: 0 15px;
+    margin: 10px 20px;
     text-decoration: none;
     font-weight: bold;
+    transition: 0.3s;
 }
+/* Pseudo-class */
 nav a:hover {
     color: #ffd700;
+    border-bottom: 2px solid #ffd700;
 }
 
+/* Container */
 .container {
-    max-width: 1000px;
-    margin: auto;
+    max-width: 1100px;
+    margin: 20px auto;
     padding: 20px;
 }
 
-/* Tables */
+/* Table Styling */
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
+    margin: 20px 0;
 }
-table, th, td {
-    border: 1px solid #ccc;
+th, td {
     padding: 12px;
-    text-align: center;
+    border: 1px solid #ccc;
 }
 th {
     background: #4b0082;
     color: white;
 }
+tr:nth-child(even) { background: #f2f2f2; } /* Attribute + pseudo-class */
 
-/* Forms */
+/* Form with Box Model */
 form {
     background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-form label {
-    display: block;
-    margin: 10px 0 5px;
+    padding: 25px;
+    border-radius: 10px;
+    border: 2px solid #eee;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 form input, form select, form textarea {
     width: 100%;
-    padding: 8px;
+    padding: 10px;
     margin-bottom: 15px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
 }
 form button {
     background: #4b0082;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 12px 25px;
     cursor: pointer;
+    border-radius: 6px;
 }
-form button:hover {
-    background: #2e0854;
-}
+form button:hover { background: #2e0854; }
 
-/* Gallery */
+/* Gallery with CSS Grid */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 15px;
 }
 .gallery img {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+/* Pseudo-class hover */
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Pseudo-element for captions */
+.gallery p::before {
+    content: "📷 ";
+    font-size: 1rem;
+}
+
+/* Video Section */
+.video-section {
+    margin: 30px 0;
+    text-align: center;
+}
+video {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 12px;
+    border: 3px solid #4b0082;
+}
+
+/* Audio Section */
+.audio-box {
+    margin: 20px 0;
+    padding: 15px;
+    background: #f0e6ff;
+    border: 1px dashed #6a0dad;
     border-radius: 8px;
+    text-align: center;
 }
 
 /* Footer */
 footer {
-    background: #333;
+    background: #222;
     color: white;
     text-align: center;
-    padding: 15px;
-    margin-top: 20px;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+    header {
+        padding: 15px;
+    }
 }
